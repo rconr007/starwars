@@ -1,0 +1,32 @@
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    color: rgb(221,221,221);
+    cursor: pointer;
+}
+
+.character-img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    background: white;
+}
+
+.character-name {
+    font-size: 1.2rem;
+}
+.mat-card-image {
+    width:15rem;
+}
+
+.mat-card {
+    display: inline-block;
+    margin: 1rem;
+}
+
+
+// .character-card {
+//     width: 25%;
+// }

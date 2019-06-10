@@ -1,0 +1,46 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'D-DIN';
+    //src: url('webfont.eot'); /* IE9 Compat Modes */
+    src: 
+        // url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        //  url('webfont.woff2') format('woff2'), /* Super Modern Browsers */
+        //  url('webfont.woff') format('woff'), /* Pretty Modern Browsers */
+        //  url('webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('./assets/fonts/DIN/D-DIN.otf')  format('embedded-opentype'), /* Safari, Android, iOS */
+        //  url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+  }
+html, body { height: 100%; }
+
+body { 
+    margin: 0; 
+    padding: 0;
+    font-family: D-DIN, "Helvetica Neue", sans-serif; 
+    background: #000000; 
+    color: rgb(221,221,221); 
+}
+
+.cast-title {
+    text-transform: uppercase;
+    opacity: 0.5;
+    font-size: 1.4rem;
+}
+
+.cast-container {
+    margin: 1rem;
+}
+
+.character-name {
+    font-size: 1.2rem;
+}
+
+.error-msg {
+    border:.1rem solid red;
+    width: 95%;
+    margin: auto;
+    margin-bottom: 1.5rem;
+
+    p {
+        text-align: center;
+    }
+}

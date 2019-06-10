@@ -1,0 +1,28 @@
+<div class="cast-container">
+  <div style="text-align:center">
+    <img width="300" [src]="'./../../assets/images/'+id+'.jpeg'" >
+    <h2 *ngIf="characterInfo">{{characterInfo.name}}</h2>
+  </div>
+
+  <h1 class="cast-title">Movies //</h1>
+
+  <mat-list>
+    <mat-list-item *ngFor="let films of filmsList" style="color: white;">
+        <!-- <mat-icon svgIcon="movie" aria-hidden="false" aria-label="movie"></mat-icon> -->
+      {{films.title}}
+      <br />
+      <span class="film-date">{{films.release_date | date :'fullDate'}}</span>
+    </mat-list-item>
+  </mat-list>
+
+  <ng-container *ngIf="!filmsList && !errorMsg" style="min-height: 4rem;">
+    <mat-spinner class="spinner"></mat-spinner>
+  </ng-container>
+
+  <div *ngIf="errorMsg" class="error-msg">
+    <p>{{errorMsg}}</p>
+  </div>
+  <br />
+  <button mat-button (click)="goBackToList()">Go Back To List</button>
+
+</div>

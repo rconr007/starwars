@@ -1,0 +1,35 @@
+<div class="cast-container">
+    <div style="text-align:center">
+      <img width="300" src="./../assets/images/Star-Wars-Poster.jpg" alt="Star Wars Poster">
+    </div>
+    <h1 class="cast-title">Characters //</h1>
+    <!-- <ul>
+      <li *ngFor="let character of characters;">
+        <img class="character-img" [src]="'./../../../assets/images/'+character.id+'.jpeg'" alt="" />
+        <h2 class="character-name">
+          <a [routerLink]="['character', character.id]">{{character.name}}</a>
+        </h2>
+      </li>
+    </ul> -->
+    <div style="margin:auto 0; margin-right: 1rem; float: left; ">
+    <mat-card class="character-card" *ngFor="let character of characters;">
+        <!-- <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Shiba Inu</mat-card-title>
+          <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+        </mat-card-header> -->
+        <img mat-card-image [src]="'./../../../assets/images/'+character.id+'.jpeg'" alt="character.name" 
+          />
+        <mat-card-content>
+            <h3 class="character-name">
+                <a [routerLink]="['character', character.id]">{{character.name}}</a>
+              </h3>
+        </mat-card-content>
+        <!-- <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions> -->
+      </mat-card>
+    </div>
+  </div>
+
